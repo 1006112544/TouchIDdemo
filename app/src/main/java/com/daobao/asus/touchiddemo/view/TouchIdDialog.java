@@ -1,10 +1,8 @@
-package com.daobao.asus.touchiddemo;
+package com.daobao.asus.touchiddemo.view;
 
-import android.animation.Animator;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.animation.Animation;
@@ -12,6 +10,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.daobao.asus.touchiddemo.R;
 
 /**
  * TouchID dialog
