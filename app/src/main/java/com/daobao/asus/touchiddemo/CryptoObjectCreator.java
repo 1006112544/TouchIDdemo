@@ -26,7 +26,7 @@ import javax.crypto.SecretKey;
 @TargetApi(Build.VERSION_CODES.M)
 public class CryptoObjectCreator {
 
-    private static final String KEY_NAME = "crypto_object_fingerprint_key";
+    private static final String KEY_NAME = "touch_id_demo_key";
 
     private FingerprintManager.CryptoObject mCryptoObject;
     private KeyStore mKeyStore;
@@ -40,7 +40,7 @@ public class CryptoObjectCreator {
     public CryptoObjectCreator(ICryptoObjectCreateListener createListener) {
         mKeyStore = providesKeystore();
         mKeyGenerator = providesKeyGenerator();
-        mCipher = providesCipher(mKeyStore);
+        mCipher = providesCipher();
         if (mKeyStore != null && mKeyGenerator != null && mCipher != null) {
             mCryptoObject = new FingerprintManager.CryptoObject(mCipher);
         }
@@ -136,7 +136,7 @@ public class CryptoObjectCreator {
         }
     }
 
-    public static Cipher providesCipher(KeyStore keyStore) {
+    public static Cipher providesCipher() {
         try {
             return Cipher.getInstance(KeyProperties.KEY_ALGORITHM_AES + "/"
                     + KeyProperties.BLOCK_MODE_CBC + "/"
