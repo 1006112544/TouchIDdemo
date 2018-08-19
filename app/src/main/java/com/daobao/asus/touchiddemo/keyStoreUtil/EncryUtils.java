@@ -129,6 +129,12 @@ public class EncryUtils {
     }
 
 
+    /**
+     * 解密方法
+     * @param needDecryptWord 需要解密的字符串
+     * @param alias key的别称
+     * @return
+     */
     public String decryptString(String needDecryptWord, String alias) {
         if(!"".equals(alias)&&!"".equals(needDecryptWord)){
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
